@@ -3,8 +3,9 @@
 <script setup lang="ts">
 import MineBlock from '../components/MineBlock.vue'
 import { GamePlay, isDev, toggleDev } from '~/composables'
-const play = new GamePlay(5, 5)
+const play = new GamePlay(5, 5, 1)
 const state = computed(() => play.board)
+const mines = computed(() => play.mines)
 useStorage('vue-minesweeper', play.state)
 watchEffect(() => {
   play.checkGameState()
@@ -17,7 +18,9 @@ watch(state, () => {
 <template>
   <div>
     Minesweeper
-    <div p5>
+
+    <div>{{ mines }}</div>
+    <div p5 w-full overflow-auto>
       <div
         v-for="row, y in state"
         :key="y"
@@ -41,5 +44,6 @@ watch(state, () => {
         RESET
       </button>
     </div>
+    <Confetti :passed="play.state.value.status === 'won'" />
   </div>
 </template>

@@ -9,6 +9,7 @@ specifiers:
   '@vitejs/plugin-vue': ^3.1.0
   '@vue/test-utils': ^2.0.2
   '@vueuse/core': ^9.2.0
+  canvas-confetti: ^1.5.1
   eslint: ^8.23.0
   jsdom: ^20.0.0
   pnpm: ^7.11.0
@@ -26,6 +27,7 @@ specifiers:
 
 dependencies:
   '@vueuse/core': 9.2.0_vue@3.2.38
+  canvas-confetti: 1.5.1
   vue: 3.2.38
   vue-router: 4.1.5_vue@3.2.38
 
@@ -1171,6 +1173,10 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
     dev: true
+
+  /canvas-confetti/1.5.1:
+    resolution: {integrity: sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg==}
+    dev: false
 
   /chai/4.3.6:
     resolution: {integrity: sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==}
