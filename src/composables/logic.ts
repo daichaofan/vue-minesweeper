@@ -178,8 +178,12 @@ export class GamePlay {
   onGameOver(status: GameStatus) {
     this.state.value.status = status
     this.state.value.endMS = +new Date()
-    if (status === 'lost')
+    if (status === 'lost') {
       this.showAllBooms()
+      setTimeout(() => {
+        alert('you lost!')
+      }, 0)
+    }
   }
 
   autoExpand(block: BlockState) {
