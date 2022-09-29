@@ -45,3 +45,9 @@ jobs:
 
       - name: TypeCheck
         run: pnpm run typecheck
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
