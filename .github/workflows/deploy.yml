@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@master
   
       - name: Before deploy
-      - uses: ./test.yml
+      - uses: ./actions/test.yml
 
       - name: Deploy
         if: ${{ success() }}
